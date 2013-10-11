@@ -12,6 +12,9 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <glassfish.home></glassfish.home>
+        <domain.username>admin</domain.username>
+        <domain.password></domain.password>
     </properties>
     
     <dependencies>
@@ -129,45 +132,6 @@
                         </auth>
                         <!-- <resourceDescriptor>path/to/resources.xml</resourceDescriptor> -->
                         <resources>
-                            <connectionFactory>
-                                <jndiName>jms/testQueueConnectionFactory</jndiName>
-                                <type>queueConnectionFactory</type>
-                                <properties>
-                                    <property>
-                                        <name>UserName</name>
-                                        <value>guest</value>
-                                    </property>
-                                    <property>
-                                        <name>Password</name>
-                                        <value>guest</value>
-                                    </property>
-                                    <property>
-                                        <name>AddressList</name>
-                                        <value>localhost:7676</value>
-                                    </property>
-                                </properties>
-                            </connectionFactory>
-                            <jmsTopic>
-                                <jndiName>jms/testTopic</jndiName>
-                                <destinationName>TestTopic</destinationName>
-                                <connectionFactory>
-                                    <jndiName>jms/testTopicConnectionFactory</jndiName>
-                                    <properties>
-                                        <property>
-                                            <name>UserName</name>
-                                            <value>guest</value>
-                                        </property>
-                                        <property>
-                                            <name>Password</name>
-                                            <value>guest</value>
-                                        </property>
-                                        <property>
-                                            <name>AddressList</name>
-                                            <value>localhost:7676</value>
-                                        </property>
-                                    </properties>
-                                </connectionFactory>
-                            </jmsTopic>
                             <jdbcDataSource>
                                 <name>SomeDS</name>
                                 <type>connectionPoolDataSource</type>
@@ -184,19 +148,19 @@
                                     </property>
                                     <property>
                                         <name>password</name>
-                                        <value>somePassword</value>
+                                        <value></value>
                                     </property>
                                     <property>
                                         <name>user</name>
-                                        <value>someUser</value>
+                                        <value>test</value>
                                     </property>
                                     <property>
                                         <name>serverName</name>
-                                        <value>some.host.somewhere</value>
+                                        <value>localhost</value>
                                     </property>
                                     <property>
                                         <name>databaseName</name>
-                                        <value>SomeDB</value>
+                                        <value>test</value>
                                     </property>
                                 </properties>
                             </jdbcDataSource>
