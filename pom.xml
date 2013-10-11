@@ -12,7 +12,7 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <glassfish.home></glassfish.home>
+        <glassfish.home>/home/mike/Dev/glassfish4</glassfish.home>
         <domain.username>admin</domain.username>
         <domain.password>admin</domain.password>
     </properties>
@@ -169,7 +169,7 @@
                     <components>
                         <component>
                             <name>${project.artifactId}</name>
-                            <artifact>${project.build.directory}/artifacts/${project.build.finalName}.war</artifact>
+                            <artifact>${project.build.directory}/${project.build.finalName}.war</artifact>
                         </component>
                     </components>
                 </configuration>
