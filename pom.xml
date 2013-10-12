@@ -16,7 +16,14 @@
         <domain.username>admin</domain.username>
         <domain.password>admin</domain.password>
     </properties>
-    
+
+	<repositories>
+		<repository>
+			<id>Java EE 7</id>
+			<url>https://maven.java.net/content/groups/promoted/</url>
+		</repository>
+	</repositories>
+
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
@@ -24,6 +31,12 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>7.0-b86</version>
+			<scope>provided</scope>
+		</dependency>
     </dependencies>
 
     <build>
@@ -54,7 +67,7 @@
                 <version>2.6</version>
                 <executions>
                     <execution>
-                        <phase>validate</phase>
+                        <phase>install</phase>
                         <goals>
                             <goal>copy</goal>
                         </goals>
