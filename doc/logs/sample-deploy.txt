@@ -1,0 +1,49 @@
+[ Sun Oct 13 20:46:33 ~/Dev/workspace/brainstorm ] mvn install glassfish:redeploy
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Building brainstorm
+[INFO]    task-segment: [install, glassfish:redeploy]
+[INFO] ------------------------------------------------------------------------
+[INFO] [resources:resources {execution: default-resources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/mike/Dev/workspace/brainstorm/src/main/resources
+[WARNING] DEPRECATED [compilerArguments]: use {@link #compilerArgs} instead.
+[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [resources:testResources {execution: default-testResources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/mike/Dev/workspace/brainstorm/src/test/resources
+[WARNING] DEPRECATED [compilerArguments]: use {@link #compilerArgs} instead.
+[INFO] [compiler:testCompile {execution: default-testCompile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [surefire:test {execution: default-test}]
+[INFO] Surefire report directory: /home/mike/Dev/workspace/brainstorm/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] [war:war {execution: default-war}]
+[INFO] Packaging webapp
+[INFO] Assembling webapp [brainstorm] in [/home/mike/Dev/workspace/brainstorm/target/brainstorm-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/mike/Dev/workspace/brainstorm/src/main/webapp]
+[INFO] Webapp assembled in [63 msecs]
+[INFO] Building war: /home/mike/Dev/workspace/brainstorm/target/brainstorm-0.0.1-SNAPSHOT.war
+[INFO] [install:install {execution: default-install}]
+[INFO] Installing /home/mike/Dev/workspace/brainstorm/target/brainstorm-0.0.1-SNAPSHOT.war to /home/mike/.m2/repository/ca/bochenek/brainstorm/0.0.1-SNAPSHOT/brainstorm-0.0.1-SNAPSHOT.war
+[INFO] [dependency:copy {execution: default}]
+[INFO] [glassfish:redeploy {execution: default-cli}]
+[INFO] Application deployed with name brainstorm.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 14 seconds
+[INFO] Finished at: Sun Oct 13 20:47:23 CEST 2013
+[INFO] Final Memory: 27M/194M
+[INFO] ------------------------------------------------------------------------
+[ Sun Oct 13 20:47:23 ~/Dev/workspace/brainstorm ] 
