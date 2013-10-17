@@ -21,14 +21,15 @@ public class WebSocketTest {
 		// Send the first message to the client
 		session.getBasicRemote().sendText("This is the first server message");
 		
+		Long start = System.nanoTime();
+		
 		// Send 3 messages to the client every 5 seconds
 		int sentMessages = 0;
-		while(sentMessages < 3){
-			Thread.sleep(500);
+		while(sentMessages < 100){
+			Thread.sleep(100);
 			session.getBasicRemote().
 				sendText("This is an intermediate server message. Count: " 
-					+ sentMessages);
-			sentMessages++;
+					+ ++sentMessages + "  after: " + (System.nanoTime() - start));
 		}
 		
 		// Send a final message to the client
