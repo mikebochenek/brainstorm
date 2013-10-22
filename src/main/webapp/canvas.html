@@ -29,9 +29,9 @@
       <div class="literally"><canvas></canvas></div>
     </div>
 
-    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery-1.8.2.js"></script>
     <script src="js/underscore-1.4.2.js"></script>
-    <script src="js/literallycanvas.min.js"></script>
+    <script src="js/literallycanvas.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function() {
@@ -43,7 +43,7 @@
         });
 
         // the only LC-specific thing we have to do
-        $('.literally').literallycanvas({imageURLPrefix: '/lib/img'});
+        $('.literally').literallycanvas({imageURLPrefix: 'img'});
       });
     </script>
   </body>
