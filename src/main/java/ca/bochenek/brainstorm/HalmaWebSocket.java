@@ -1,9 +1,8 @@
 package ca.bochenek.brainstorm;
 
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
 
+import javax.websocket.EncodeException;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
@@ -16,28 +15,19 @@ public class HalmaWebSocket {
 
 	@OnMessage
     public void onMessage(String message, Session session) 
-    	throws IOException, InterruptedException {
+    	throws IOException, InterruptedException, EncodeException {
 		
 		// Print the client message for testing purposes
 		System.out.println("Received: " + message);
+
 		
-		// Send the first message to the client
-		session.getBasicRemote().sendText("This is the first server message");
-		
-		Long start = System.nanoTime();
-		
-		// Send 3 messages to the client every 5 seconds
-		int sentMessages = 0;
-//		while(sentMessages < 100){
-//			Thread.sleep(100);
-//			session.getBasicRemote().
-//				sendText("This is an intermediate server message. Count: " 
-//					+ ++sentMessages + "  after: " + (System.nanoTime() - start));
-//		}
-		
-		// Send a final message to the client
-		session.getBasicRemote().sendText("This is the last server message");
+		// https://github.com/arun-gupta/javaee7-samples/tree/master/websocket/chat
+		// https://blogs.oracle.com/arungupta/entry/chat_sever_using_websocket_totd
+	    for (Session peer : session.getOpenSessions()) {
+	        peer.getBasicRemote().sendObject(message);
+	    }
     }
+
 	
 	@OnOpen
     public void onOpen () {
