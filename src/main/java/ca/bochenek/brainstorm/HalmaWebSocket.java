@@ -1,12 +1,15 @@
 package ca.bochenek.brainstorm;
 
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
+
 
 @ServerEndpoint("/halmawebsocket")
 public class HalmaWebSocket {
@@ -25,12 +28,12 @@ public class HalmaWebSocket {
 		
 		// Send 3 messages to the client every 5 seconds
 		int sentMessages = 0;
-		while(sentMessages < 100){
-			Thread.sleep(100);
+//		while(sentMessages < 100){
+//			Thread.sleep(100);
 //			session.getBasicRemote().
 //				sendText("This is an intermediate server message. Count: " 
 //					+ ++sentMessages + "  after: " + (System.nanoTime() - start));
-		}
+//		}
 		
 		// Send a final message to the client
 		session.getBasicRemote().sendText("This is the last server message");
